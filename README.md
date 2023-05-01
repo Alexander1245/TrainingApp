@@ -20,8 +20,8 @@ Kotlin, Coroutines, Flows, MVVM, Clean Architecture, Hilt, Retrofit2, <a href="h
 Скриншоты:
 <p float="left">
   <img src="https://user-images.githubusercontent.com/36124349/235466356-7c8410c4-8fb2-4523-af83-37b72d41521b.jpg" width="100" />
-  <img src="https://user-images.githubusercontent.com/36124349/235466363-0729a89d-a76f-462b-b387-8996651c0f55.jpg" width="100" /> 
-  <img src="https://user-images.githubusercontent.com/36124349/235466380-2b27dba8-3b6f-4551-a21f-6284219b1ffa.jpg" width="100" />
+  <img src="https://user-images.githubusercontent.com/36124349/235541390-75b9a5fb-05d2-4908-a7b9-ff6411a09a2b.jpg" width="100" /> 
+  <img src="https://user-images.githubusercontent.com/36124349/235541402-8ff9c4e5-5b79-4545-a039-6b5cc550ae19.jpg" width="100" />
   <img src="https://user-images.githubusercontent.com/36124349/235466393-7b673433-57cb-4058-8247-5584945f3f6b.jpg" width="100" />
   <img src="https://user-images.githubusercontent.com/36124349/235520409-fbd239ee-78ba-4943-a1f7-61db6ca7482b.jpg" width="100" />
 </p>
