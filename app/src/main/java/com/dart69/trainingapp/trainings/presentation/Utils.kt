@@ -45,6 +45,6 @@ fun String.formatToTime(): Long {
 
 fun Long.toDateString(pattern: String = "EEEE, dd MMMM"): String {
     val dateTime = LocalDateTime.ofInstant(Instant.ofEpochMilli(this), ZoneId.systemDefault())
-    val formatter = DateTimeFormatter.ofPattern(pattern, Locale("ru"))
+    val formatter = DateTimeFormatter.ofPattern(pattern, Locale.getDefault())
     return dateTime.format(formatter)
 }
