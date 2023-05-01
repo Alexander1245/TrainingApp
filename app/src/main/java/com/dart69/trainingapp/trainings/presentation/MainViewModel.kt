@@ -3,10 +3,7 @@ package com.dart69.trainingapp.trainings.presentation
 import androidx.lifecycle.viewModelScope
 import com.dart69.core.errors.NoNetworkError
 import com.dart69.core.mapper.Mapper
-import com.dart69.core.results.ResultsMutableStateFlow
-import com.dart69.core.results.isLoading
-import com.dart69.core.results.onError
-import com.dart69.core.results.takeData
+import com.dart69.core.results.*
 import com.dart69.mvvm.viewmodels.CommunicatorViewModel
 import com.dart69.trainingapp.trainings.domain.SchedulesRepository
 import com.dart69.trainingapp.trainings.domain.SchedulesRepository.Options
@@ -39,9 +36,12 @@ class MainViewModel @Inject constructor(
     private fun collectSchedules() {
         schedules.onEach { results ->
             states.update { current ->
+                val isInitialError = results.isError() && current.items.isEmpty()
+                val isResultsEmpty = results.takeData()?.isEmpty() == true
                 current.copy(
                     items = results.takeData()?.let(mapper::map) ?: current.items,
                     isLoading = results.isLoading(),
+                    isPlaceholderVisible = isInitialError || isResultsEmpty,
                 )
             }
         }.onError(this::handleError).launchIn(viewModelScope)
@@ -62,5 +62,6 @@ class MainViewModel @Inject constructor(
     data class MainState(
         val items: List<SchedulesItem> = emptyList(),
         val isLoading: Boolean = false,
+        val isPlaceholderVisible: Boolean = true,
     )
 }

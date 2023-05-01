@@ -12,4 +12,5 @@
     <string name="are_you_want_to_enable_network">Are you want to enable network in settings?</string>
     <string name="yes">Yes</string>
     <string name="internal_error">Internal error occurred</string>
+    <string name="placeholder_message">There are no schedules were found. try swiping down to download up-to-date schedule information</string>
 </resources>

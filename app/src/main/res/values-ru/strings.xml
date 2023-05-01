@@ -12,4 +12,5 @@
         <string name="are_you_want_to_enable_network">Хотите включить в настройках?</string>
         <string name="yes">Да</string>
         <string name="internal_error">Произошла внутренняя ошибка</string>
+    <string name="placeholder_message">Расписания не были найдены. Попробуйте смахнуть вниз, чтобы загрузить актуальную информацию о расписании</string>
 </resources>

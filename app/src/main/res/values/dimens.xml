@@ -9,4 +9,6 @@
     <dimen name="text_view_padding">4dp</dimen>
     <dimen name="card_corner_radius">12dp</dimen>
     <dimen name="large_margin">24dp</dimen>
+    <dimen name="medium_text_size">20sp</dimen>
+    <dimen name="stroke_width">1dp</dimen>
 </resources>

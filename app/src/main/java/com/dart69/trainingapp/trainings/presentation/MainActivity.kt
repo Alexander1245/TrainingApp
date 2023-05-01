@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dart69.mvvm.screens.Screen
 import com.dart69.mvvm.viewmodels.repeatOnStarted
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity(), Screen<ActivityMainBinding, MainViewMo
             viewModel.collectStates { state ->
                 skeleton.isSkeletonVisible = state.isLoading
                 swipeRefreshLayout.isRefreshing = state.isLoading
+                binding.placeholder.isVisible = state.isPlaceholderVisible
                 schedulesAdapter.submitList(state.items)
             }
         }
