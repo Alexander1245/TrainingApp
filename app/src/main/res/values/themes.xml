@@ -1,6 +1,6 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
-    <style name="Theme.TrainingApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.TrainingApp" parent="BaseAppTheme">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -12,5 +12,19 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="BaseAppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="android:textViewStyle">@style/BaseTextView</item>
+    </style>
+
+    <style name="BaseTextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    
+    <style name="SingleLineTextView" parent="BaseTextView">
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
     </style>
 </resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string name="schedule">Расписание</string>
+        <string name="trainings">Тренировки</string>
+        <string name="requests">Запросы</string>
+        <string name="add">Добавить</string>
+        <string name="chat">Чат</string>
+        <string name="more">Еще</string>
+        <string name="error_1s">Ошибка: %1s</string>
+        <string name="network_timeout">Сервер не отвечает. Проверьте соединение с интернетом.</string>
+        <string name="network_is_disabled">Мобильная сеть отключена</string>
+        <string name="are_you_want_to_enable_network">Хотите включить в настройках?</string>
+        <string name="yes">Да</string>
+        <string name="internal_error">Произошла внутренняя ошибка</string>
+</resources>

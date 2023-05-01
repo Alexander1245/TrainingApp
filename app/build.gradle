@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
@@ -9,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "com.dart69.trainingapp"
-        minSdk 24
+        minSdk 26
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -30,9 +32,23 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    viewBinding {
+        enable true
+    }
 }
 
 dependencies {
-    def version = "1.0.0"
-    implementation "com.github.Alexander1245.BaseMVVM:presentation:$version"
+    def mvvm_version = "1.0.0"
+    def hilt_version = "2.44"
+    implementation "com.github.Alexander1245.BaseMVVM:presentation:$mvvm_version"
+    implementation "com.github.Alexander1245.BaseMVVM:domain:$mvvm_version"
+    implementation "com.github.Alexander1245.BaseMVVM:data:$mvvm_version"
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+    implementation "com.faltenreich:skeletonlayout:4.0.0"
+}
+
+kapt {
+    correctErrorTypes true
 }

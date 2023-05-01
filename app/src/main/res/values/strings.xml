@@ -1,9 +1,15 @@
 <resources>
-    <string name="app_name">TrainingApp</string>
+    <string name="app_name" translatable="false">TrainingApp</string>
     <string name="schedule">Schedule</string>
     <string name="trainings">Trainings</string>
     <string name="requests">Requests</string>
     <string name="add">Add</string>
     <string name="chat">Chat</string>
     <string name="more">More</string>
+    <string name="error_1s">Error: %1s</string>
+    <string name="network_timeout">The server isn\'t responding. Check your internet connection.</string>
+    <string name="network_is_disabled">Network is disabled</string>
+    <string name="are_you_want_to_enable_network">Are you want to enable network in settings?</string>
+    <string name="yes">Yes</string>
+    <string name="internal_error">Internal error occurred</string>
 </resources>

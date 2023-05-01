@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/card_corner_radius">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider"
+            android:layout_width="@dimen/training_divider_width"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/SingleLineTextView"
+            android:id="@+id/textViewTimeStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_margin"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewType"
+            app:layout_constraintStart_toEndOf="@id/divider"
+            app:layout_constraintTop_toTopOf="@+id/textViewType"
+            tools:text="10:00" />
+
+        <TextView
+            style="@style/SingleLineTextView"
+            android:id="@+id/textViewTimeEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/small_margin"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/iconPerson"
+            app:layout_constraintStart_toStartOf="@+id/textViewTimeStart"
+            app:layout_constraintTop_toTopOf="@+id/iconPerson"
+            tools:text="11:00" />
+
+        <TextView
+            style="@style/SingleLineTextView"
+            android:layout_marginTop="@dimen/small_margin"
+            android:id="@+id/textViewType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/medium_margin"
+            android:paddingHorizontal="@dimen/text_view_padding"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textViewTimeStart"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Training #1" />
+
+        <ImageView
+            android:id="@+id/iconPerson"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:src="@drawable/ic_person"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewTrainer"
+            app:layout_constraintStart_toStartOf="@id/textViewType"
+            app:layout_constraintTop_toTopOf="@+id/textViewTrainer"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            style="@style/SingleLineTextView"
+            android:id="@+id/textViewTrainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:paddingHorizontal="@dimen/text_view_padding"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/iconLocation"
+            app:layout_constraintEnd_toStartOf="@+id/iconLocation"
+            app:layout_constraintStart_toEndOf="@id/iconPerson"
+            app:layout_constraintTop_toTopOf="@+id/iconLocation"
+            tools:text="Ivanov Ivan" />
+
+        <TextView
+            style="@style/SingleLineTextView"
+            android:id="@+id/textViewLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/medium_margin"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textViewType"
+            app:layout_constraintTop_toBottomOf="@+id/textViewType"
+            tools:text="Location #1" />
+
+        <ImageView
+            android:id="@+id/iconLocation"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:src="@drawable/ic_location"
+            app:layout_constraintBottom_toBottomOf="@id/textViewLocation"
+            app:layout_constraintEnd_toStartOf="@id/textViewLocation"
+            app:layout_constraintTop_toTopOf="@id/textViewLocation"
+            app:layout_constraintVertical_bias="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
