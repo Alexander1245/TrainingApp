@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/trainings_item"
+        android:icon="@drawable/ic_calendar"
+        android:title="@string/trainings" />
+
+    <item
+        android:id="@+id/requests_item"
+        android:icon="@drawable/ic_check_box"
+        android:title="@string/requests" />
+
+    <item
+        android:id="@+id/add_item"
+        android:icon="@drawable/ic_add"
+        android:title="@string/add" />
+
+    <item android:id="@+id/chat_item"
+        android:icon="@drawable/ic_chat"
+        android:title="@string/chat" />
+
+    <item android:id="@+id/more_item"
+        android:icon="@drawable/ic_more"
+        android:title="@string/more" />
+</menu>

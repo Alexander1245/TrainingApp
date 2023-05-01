@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TrainingApp</string>
+    <string name="schedule">Schedule</string>
+    <string name="trainings">Trainings</string>
+    <string name="requests">Requests</string>
+    <string name="add">Add</string>
+    <string name="chat">Chat</string>
+    <string name="more">More</string>
+</resources>
