@@ -6,7 +6,7 @@ data class Schedule(
     val endTime: String,
     val name: String,
     val trainer: String,
-    val date: String,
+    val date: Long,
     val location: String,
     val color: Int,
 )

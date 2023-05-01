@@ -7,8 +7,10 @@ import com.dart69.mvvm.events.*
 import com.dart69.mvvm.strings.asStringResource
 import com.dart69.trainingapp.R
 import com.faltenreich.skeletonlayout.Skeleton
+import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
+import java.util.*
 
 var Skeleton.isSkeletonVisible: Boolean
     get() = isSkeleton()
@@ -37,8 +39,13 @@ fun provideNetworkSettingsIntent(): String =
         Settings.ACTION_WIRELESS_SETTINGS
     }
 
-fun formatDate(dateString: String, pattern: String): String {
-    val format = DateTimeFormatter.ISO_DATE
-    val date = LocalDate.parse(dateString, format)
-    return date.format(DateTimeFormatter.ofPattern(pattern))
+fun String.formatToTime(pattern: String = "yyyy-MM-DD"): Long {
+    val format = SimpleDateFormat(pattern, Locale.getDefault())
+    return requireNotNull(format.parse(this)?.time)
+}
+
+fun Long.toDateString(pattern: String): String {
+    val date = Date(this)
+    val format = SimpleDateFormat(pattern, Locale.getDefault())
+    return format.format(date)
 }
