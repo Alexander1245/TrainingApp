@@ -7,8 +7,7 @@ import com.dart69.mvvm.events.*
 import com.dart69.mvvm.strings.asStringResource
 import com.dart69.trainingapp.R
 import com.faltenreich.skeletonlayout.Skeleton
-import java.text.SimpleDateFormat
-import java.time.LocalDate
+import java.time.*
 import java.time.format.DateTimeFormatter
 import java.util.*
 
@@ -39,13 +38,13 @@ fun provideNetworkSettingsIntent(): String =
         Settings.ACTION_WIRELESS_SETTINGS
     }
 
-fun String.formatToTime(pattern: String = "yyyy-MM-DD"): Long {
-    val format = SimpleDateFormat(pattern, Locale.getDefault())
-    return requireNotNull(format.parse(this)?.time)
+fun String.formatToTime(): Long {
+    val date = LocalDate.parse(this)
+    return date.atStartOfDay().toInstant(ZoneOffset.UTC).toEpochMilli()
 }
 
-fun Long.toDateString(pattern: String): String {
-    val date = Date(this)
-    val format = SimpleDateFormat(pattern, Locale.getDefault())
-    return format.format(date)
+fun Long.toDateString(pattern: String = "EEEE, dd MMMM"): String {
+    val dateTime = LocalDateTime.ofInstant(Instant.ofEpochMilli(this), ZoneId.systemDefault())
+    val formatter = DateTimeFormatter.ofPattern(pattern, Locale("ru"))
+    return dateTime.format(formatter)
 }

@@ -10,10 +10,6 @@ class SchedulesItemMapper @Inject constructor() :
     Mapper<List<@JvmSuppressWildcards Schedule>, List<@JvmSuppressWildcards SchedulesItem>> {
     override fun map(from: List<Schedule>): List<SchedulesItem> =
         from.groupByTo(TreeMap(), Schedule::date).flatMap { (date, schedules) ->
-            listOf(SchedulesItem.Date(date.toDateString(PATTERN))) + schedules.map(SchedulesItem::Common)
+            listOf(SchedulesItem.Date(date.toDateString())) + schedules.map(SchedulesItem::Common)
         }
-
-    private companion object {
-        const val PATTERN = "EEEE, dd MMMM"
-    }
 }
