@@ -19,8 +19,8 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            style="@style/SingleLineTextView"
             android:id="@+id/textViewTimeStart"
+            style="@style/SingleLineTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/small_margin"
@@ -31,8 +31,8 @@
             tools:text="10:00" />
 
         <TextView
-            style="@style/SingleLineTextView"
             android:id="@+id/textViewTimeEnd"
+            style="@style/SingleLineTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/small_margin"
@@ -43,12 +43,12 @@
             tools:text="11:00" />
 
         <TextView
-            style="@style/SingleLineTextView"
-            android:layout_marginTop="@dimen/small_margin"
             android:id="@+id/textViewType"
+            style="@style/SingleLineTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/small_margin"
             android:paddingHorizontal="@dimen/text_view_padding"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -64,11 +64,12 @@
             app:layout_constraintBottom_toBottomOf="@+id/textViewTrainer"
             app:layout_constraintStart_toStartOf="@id/textViewType"
             app:layout_constraintTop_toTopOf="@+id/textViewTrainer"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintVertical_bias="0.5"
+            app:tint="@color/icon_color" />
 
         <TextView
-            style="@style/SingleLineTextView"
             android:id="@+id/textViewTrainer"
+            style="@style/SingleLineTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/small_margin"
@@ -81,8 +82,8 @@
             tools:text="Ivanov Ivan" />
 
         <TextView
-            style="@style/SingleLineTextView"
             android:id="@+id/textViewLocation"
+            style="@style/SingleLineTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/medium_margin"
@@ -100,7 +101,8 @@
             app:layout_constraintBottom_toBottomOf="@id/textViewLocation"
             app:layout_constraintEnd_toStartOf="@id/textViewLocation"
             app:layout_constraintTop_toTopOf="@id/textViewLocation"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintVertical_bias="0.5"
+            app:tint="@color/icon_color" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
